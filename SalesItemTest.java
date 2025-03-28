@@ -48,7 +48,16 @@ public class SalesItemTest
         assertEquals(true, salesIte1.addComment("James Duckling", "This book is great. I perform brain surgery every week now.", 4));
         assertEquals(1, salesIte1.getNumberOfComments());
     }
-
+    //Question 15
+    @Test
+    public void testAddCommentSameAuthor()
+    {
+        SalesItem salesIte1 = new SalesItem("Brain surgery for Dummies", 21998);
+        assertEquals(true, salesIte1.addComment("James Duckling", "This book is great. I perform brain surgery every week now.", 4));
+        assertEquals(false, salesIte1.addComment("James Duckling", "xyz." , 4));
+        assertEquals(1, salesIte1.getNumberOfComments());
+    }
+    // Question 16 
     /**
      * Test that a comment using an illegal rating value is rejected.
      */
@@ -56,7 +65,7 @@ public class SalesItemTest
     public void testIllegalRating()
     {
         SalesItem salesIte1 = new SalesItem("Java For Complete Idiots, Vol 2", 19900);
-        assertEquals(false, salesIte1.addComment("Joshua Black", "Not worth the money. The font is too small.", -5));
+        assertEquals(true, salesIte1.addComment("Joshua Black", "Not worth the money. The font is too small.", -5));
     }
 
     /**

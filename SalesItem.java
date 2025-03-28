@@ -14,6 +14,13 @@ import java.util.Iterator;
  */
 public class SalesItem
 {
+    /* Question 14 
+     * Comment test / SetUp / TearDown methods are created 
+     * 
+     * 
+     * 
+     */
+    
     private String name;
     private int price;  // in cents
     private ArrayList<Comment> comments;
