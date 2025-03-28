@@ -78,14 +78,16 @@ public class SalesItemTest
         assertEquals("test name", salesIte1.getName());
         assertEquals(1000, salesIte1.getPrice());
     }
-
+    // Question 16 (test)
     @Test
     public void addComment()
     {
-        SalesItem salesIte1 = new SalesItem("Brain Surgery for Dummies.", 9899);
-        assertEquals(true, salesIte1.addComment("Fred", "Great - I perform brain surgery every week now!", 4));
+        SalesItem salesIte1 = new SalesItem("Sale Items1 ", 50);
+        assertEquals(7, salesIte1.addComment("Fatima", "It's good", 7));
+        assertEquals(5, salesIte1.addComment("Salmah", "It's okay", 5));
     }
 }
+
 
 
 
